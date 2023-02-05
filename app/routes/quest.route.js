@@ -6,6 +6,9 @@ const router = express.Router()
 router.route("/")
     .get(quest.findALl)
     .post(quest.create)
+router.route("/:id")
+    .get(quest.findOne)
     .delete(quest.delete)
+
 
 module.exports = router;
